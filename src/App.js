@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidenav from './Components/Sidenav'
-import Example from './Components/Example'
+// import Example from './Components/Example'
 
 function App() {
   return (
