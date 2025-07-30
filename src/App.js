@@ -1,12 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Sidenav from './Components/Sidenav'
+import Example from './Components/Example'
 
 function App() {
   return (
-    <div className="App">
-     hello
+    <div>
+      <Sidenav/>
+      {/* <Example/> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
