@@ -7,6 +7,7 @@ import { RiContactsBook3Line } from "react-icons/ri";
 import { MdOutlineHomeWork } from "react-icons/md";
 import { MdPayment } from "react-icons/md";
 import { AiFillLock } from "react-icons/ai";
+import Logo from "../Assests/E-logo.jpg"
 function Stickynavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -66,7 +67,7 @@ function Stickynavbar() {
       <div className="">
         <div className=" bg-gray-900">
           <div className="flex md:hidden flex-row justify-between p-5">
-            <div className="text-white">Logo</div>
+             <img src={Logo} alt="Logo" className="w-32 h-10"/>
             <div className=" flex  md:hidden ">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -335,8 +336,10 @@ function Stickynavbar() {
 
       {/* //Main Responsive// */}
       <div className=" md:block md:flex flex flex-col md:flex-row relative">
-        <div className="md:w-64 h-dvh sticky top-0 bg-gray-900 p-3  overflow-y-auto   text-gray-300 hidden md:block">
-          <div className="text-white text-xl mt-3">Logo</div>
+        <div className="md:w-64 md:h-screen sticky top-0  bg-gray-900 p-3  text-gray-300 hidden md:block">
+          <div className="text-white text-xl mt-3">
+               <img src={Logo} alt="Logo" className="md:w-48 md:h-12 xl:w-72 lg:w-72 xl:w-72 h-12"/>
+          </div>
 
           <ul className=" mt-3">
             {/* Dashboards */}
@@ -448,7 +451,7 @@ function Stickynavbar() {
             <li>
               <div
                 onClick={() => toggleMenu("Pages")}
-                className={`flex items-center justify-between p-2 mt-3 rounded-lg cursor-pointer ${
+                className={`flex items-center justify-between p-2 mt-2 rounded-lg cursor-pointer ${
                   openMenu === "Pages"
                     ? "bg-gray-700"
                     : "hover:bg-gray-700"
@@ -494,7 +497,7 @@ function Stickynavbar() {
             <li>
               <div
                 onClick={() => toggleMenu("Authentication")}
-                className={`flex items-center justify-between p-2 mt-3 rounded-lg cursor-pointer ${
+                className={`flex items-center justify-between p-2 mt-2 rounded-lg cursor-pointer ${
                   openMenu === "Authentication"
                     ? "bg-gray-700"
                     : "hover:bg-gray-700"
@@ -524,7 +527,7 @@ function Stickynavbar() {
               {/* Submenu */}
 
               {openMenu === "Authentication" && (
-                <ul className="ml-9  space-y-3 text-gray-400">
+                <ul className="ml-9  space-y-2 text-gray-400">
                   {Auth.map((Auth) => (
                     <li className="hover:text-white cursor-pointer">
                       {Auth.items}
