@@ -1,12 +1,12 @@
 import React from 'react'
-import Sidenav from './Components/Sidenav'
-// import Example from './Components/Example'
+import Stickynavbar from './Components/Stickynavbar'
+import Example from './Components/Example'
 
 function App() {
   return (
     <div>
-      <Sidenav/>
-      {/* <Example/> */}
+      <Example/>
+      {/* <Stickynavbar/> */}
     </div>
   )
 }
