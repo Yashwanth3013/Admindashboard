@@ -1,5 +1,4 @@
-import React from "react";
-import Stickynavbar from "./Stickynavbar";
+import React, { useState, useEffect }  from "react";
 
 import { MdDarkMode } from "react-icons/md";
 
@@ -9,9 +8,18 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 
 function Dashboard() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
   return (
     <div className="flex flex-col">
-      <div className="card shadow-lg bg-white h-full w-full">
+      <div className="card shadow-lg border-2 bg-white h-full w-full dark:bg-gray-900 text-black dark:text-white">
         <div className="flex flex-col gap-5 md:gap-0 md:flex-row justify-between items-center p-5">
           <div>
             <div class="w-full max-w-lg mx-auto px-4">
@@ -43,10 +51,10 @@ function Dashboard() {
             </div>
           </div>
           <div className="flex flex-row justify-center items-center gap-10 md:gap-5 md:mr-0 xl:mr-10  lg:mr-10">
-            <div>
+            <div onClick={() => setDarkMode(!darkMode)}>
               <MdDarkMode size={24} style={{ cursor: "pointer" }} />
             </div>
-            <div>
+            <div >
               <IoNotificationsOutline size={24} style={{ cursor: "pointer" }} />
             </div>
             <div>

@@ -4,6 +4,7 @@ import Dashboard from './Components/Dashboard'
 import Timeframe from './Components/Timeframe'
 import Stickynavbar from './Components/Stickynavbar'
 import Example from './Components/Example'
+import Examples from './Components/Examples'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       {/* <Timeframe/> */}
       {/* <Stickynavbar/> */}
       <Example/>
+      {/* <Examples/> */}
     </div>
   )
 }

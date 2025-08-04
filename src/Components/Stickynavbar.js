@@ -60,6 +60,8 @@ function Stickynavbar() {
 
   ]
 
+  
+
   return (
     <div className="maindiv">
       {/* // Mobile Responsive// */}
@@ -335,8 +337,8 @@ function Stickynavbar() {
       </div>
 
       {/* //Main Responsive// */}
-      <div className=" md:block md:flex flex flex-col md:flex-row relative">
-        <div className="md:w-64 md:h-screen sticky top-0  bg-gray-900 p-3  text-gray-300 hidden md:block">
+      <div className=" md:block md:flex flex flex-col md:flex-row relative ">
+        <div className="md:w-64 md:h-screen sticky top-0  bg-gray-900 p-3 text-gray-300 hidden md:block dark:bg-white text-white dark:text-black">
           <div className="text-white text-xl mt-3">
                <img src={Logo} alt="Logo" className="md:w-48 md:h-12 xl:w-72 lg:w-72 xl:w-72 h-12"/>
           </div>

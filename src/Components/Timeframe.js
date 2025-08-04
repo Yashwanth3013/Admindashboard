@@ -36,7 +36,7 @@ function Timeframe() {
      ]
   return (
      
-    <div className="bg-gray-200 w-full md:h-dvh bg-gray-900 p-3  ">
+    <div className="bg-gray-200 w-full p-3 bg-white dark:bg-gray-900 text-black dark:text-white ">
       <div className="p-5 ">
         <div className="font-semibold" style={{ color: "#5D7186" }}>
           Analytics
@@ -48,7 +48,7 @@ function Timeframe() {
           Time Frame
         </span>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-5 md:gap-5 lg:grid-cols-2 xl:grid-cols-3 mt-10 md:p-5">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-5 md:gap-5 lg:grid-cols-2 xl:grid-cols-3 mt-10 mb-20 md:p-5">
 {cards.map((cards)=>(
           <div className="card shadow-lg bg-white md:w-72 xl:w-72 h-40">
                
@@ -67,26 +67,21 @@ function Timeframe() {
           </div>
  ))}
         </div>
-         <div className="grid grid-cols-1 md:grid-cols-1 gap-5 md:gap-5 lg:grid-cols-2 xl:grid-cols-3 mt-10 md:p-5">
-{cards.map((cards)=>(
-          <div className="card shadow-lg bg-white md:w-72 xl:w-72 h-40">
-               
-           <div className="flex flex-row justify-start items-center p-10 gap-10">
-               <div className="flex flex-col justify-center items-center gap-5">
-                    <div className="card shadow-lg w-10 bg-gray-100 flex justify-center items-center">
-                         {cards.icon}
-                    </div>
-                    <div className="text-sm" style={{color:"#687D92"}}>{cards.text}</div>
-               </div>
-               <div className="text-black font-bold">
-                    {cards.price}
-               </div>
+
+        {/* //Latest Transactions// */}
+        <div className="Latest Transaction">
+
+          <div className="w-full card shadow-lg bg-white rounded-md">
+           <div className="flex flex-row justify-between items-center p-5">
+               <div className="font-semibold" style={{color:"#5D7186"}}>Latest Transaction</div>
+               <div>2</div>
            </div>
-           
           </div>
- ))}
+
         </div>
       </div>
+
+      
     </div>
   );
 }
